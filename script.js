@@ -1,4 +1,5 @@
 const { createApp } = Vue
+import ButtonCounter from './ButtonCounter.vue'
 
 createApp({
   data() {
