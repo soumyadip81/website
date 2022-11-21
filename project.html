@@ -14,31 +14,49 @@
       integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
       crossorigin="anonymous"></script>
    <!--Custom Style-->
-   <link rel="stylesheet" type="text/css" href="index.css">
+   <link rel="stylesheet" type="text/css" href="project.css">
    <!--Vue-->
    <script src="https://unpkg.com/vue@3"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+   
+   <header>
+    <a href="#main" class="skip-to-main-content-link">Skip to main content</a>
+    </header>
 </head>
+<main>
+    <body>
+        <div id='project'>
+              <nav class="navbar navbar-default justify-content-between">
+                 <a class="navbar-brand" href="index.html">Home</a>
+                 <a class="navbar-brand" href="about.html">About</a>
+                 <a class="navbar-brand" href="project.html">Projects</a>
+                 <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                 </form>
+              </nav>
+     
+              <div class="container">
+                 <h1> Project</h1>
+                 <img src = "assets/euchre.png" alt = "euchre"/>
+                 <img src = "assets/SQL-Clone.png" alt = "SQL-Clone"/>
+                 <img src = "assets/image-processing.png" alt = "image-processing"/>
+                 <img src = "assets/piazza.png" alt = "piazza"/>
+                 <img src = "assets/asteroid.png" alt = "asteroid"/>
+                 <img src = "assets/itunes.png" alt = "itunes"/>
+                 <img src = "assets/starwars.png" alt = "starwars"/>
+                 <img src = "assets/treasure.png" alt = "treasure"/>
+                 <img src = "assets/numbers.png" alt = "numbers"/>
+     
+                 
+                 
+     
+                
+              </div>
+        </div>
+        <script src="project.js"></script>
+     </body>
 
-<body>
-   <div id='project'>
-         <nav class="navbar navbar-default justify-content-between">
-            <a class="navbar-brand" href="index.html">Home</a>
-            <a class="navbar-brand" href="about.html">About</a>
-            <a class="navbar-brand" href="project.html">Projects</a>
-            <form class="form-inline">
-               <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-               <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-         </nav>
+</main>
 
-         <div class="container">
-            <h1> Project</h1>
-            
-
-           
-         </div>
-   </div>
-   <script src="project.js"></script>
-</body>
 </html>

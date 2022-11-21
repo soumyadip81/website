@@ -14,31 +14,49 @@
       integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
       crossorigin="anonymous"></script>
    <!--Custom Style-->
-   <link rel="stylesheet" type="text/css" href="index.css">
+   <link rel="stylesheet" type="text/css" href="about.css">
    <!--Vue-->
    <script src="https://unpkg.com/vue@3"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+   
+   <header>
+    <a href="#main" class="skip-to-main-content-link">Skip to main content</a>
+     </header>
+
 </head>
+<main>
+    <body>
+        <div id='about'>
+              <nav class="navbar navbar-default justify-content-between">
+                 <a class="navbar-brand" href="index.html">Home</a>
+                 <a class="navbar-brand" href="about.html">About</a>
+                 <a class="navbar-brand" href="project.html">Projects</a>
+                 <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                 </form>
+              </nav>
+     
+              <div class="container">
+                 <h1> About</h1>
+                 <img src = "assets/C++.png" alt = "C++"/>
+                 <img src = "assets/C.png" alt = "C"/>
+                 <img src = "assets/reactJs.png" alt = "react"/>
+                 <img src = "assets/vueJs.png" alt = "vue"/>
+                 <img src = "assets/javascript.png" alt = "js"/>
+                 <img src = "assets/typescript.png" alt = "typescript"/>
+                 <img src = "assets/salesforce.png" alt = "salesforce"/>
+                 <img src = "assets/html.png" alt = "html"/>
+                 <img src = "assets/css.png" alt = "css"/>
+     
+                 
+     
+                
+              </div>
+        </div>
+        <script src="about.js"></script>
+     </body>
 
-<body>
-   <div id='about'>
-         <nav class="navbar navbar-default justify-content-between">
-            <a class="navbar-brand" href="index.html">Home</a>
-            <a class="navbar-brand" href="about.html">About</a>
-            <a class="navbar-brand" href="project.html">Projects</a>
-            <form class="form-inline">
-               <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-               <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-         </nav>
+</main>
 
-         <div class="container">
-            <h1> About</h1>
-            
-
-           
-         </div>
-   </div>
-   <script src="about.js"></script>
-</body>
 </html>
