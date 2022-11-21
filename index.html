@@ -22,18 +22,20 @@
 
 <body>
    <div id='app'>
-      <nav class="navbar navbar-default">
-         <div class="container">
-            <div class="navbar-header">
-               <h3>My Website</h3>
+         <nav class="navbar navbar-default">
+            <div class="container">
+               <div class="navbar-header">
+                  <h3>My Website</h3>
+               </div>
             </div>
-         </div>
-      </nav>
-      <div class="container">
-         <div class="row searchbar">
-            <div class="col-lg-12 col-md-12 col-sm-12">
-               <h4>Navigate to page: </h4>
-               <input type="text" @input = "searchBarValueDetermine" @keyup = "searchBarEnter">
+         </nav>
+
+         <div class="container">
+            <div class="row searchbar">
+               <div class="col-lg-12 col-md-12 col-sm-12">
+                  <h4>Navigate to page: </h4>
+                  <input type="text" @input = "searchBarValueDetermine" @keyup = "searchBarEnter">
+               </div>
             </div>
          </div>
    </div>
