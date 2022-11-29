@@ -24,7 +24,7 @@ createApp({
       collectionNameToTrack: new Map(),
 
 
-  buttonArray:[],
+  buttonArray:['hello'],
   dropDownArray:[
   { text: "Reset to Original", selected: true },
   { text: "Collection Name", selected: false},
@@ -32,6 +32,11 @@ createApp({
     }
   },
   methods: {
+
+    sideBarUpdate(e){
+      console.log('hello');
+  
+  }
    
    
    

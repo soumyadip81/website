@@ -23,38 +23,86 @@
     <a href="#main" class="skip-to-main-content-link">Skip to main content</a>
     </header>
 </head>
-<main>
+<mai @resize = "calcWidth">
     <body>
         <div id='project'>
               <nav class="navbar navbar-default justify-content-between">
-                 <a class="navbar-brand" href="index.html">Home</a>
+                 <a onclick="sideBarUpdate(this)" class="navbar-brand" href="index.html">Home</a>
                  <a class="navbar-brand" href="about.html">About</a>
-                 <a class="navbar-brand" href="project.html">Projects</a>
+                 <a class="navbar-brand project" href="project.html">Projects</a>
                  <form class="form-inline">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                  </form>
               </nav>
+              <h1> Projects</h1>
+              <p> These are some of the projects I have worked on. Please feel free to look over them and sort them based on
+               languages and frameworks used.
+              </p>
+
+              <div class = "buttons">
+                  <span v-for = "button in buttonArray">
+                     <button  v-if = "button.selected === true" class = 'btn btn-success' @click = "sortArrays(button.text)">{{button.text}}</button>
+                     <button  v-if = "button.selected === false" class = 'btn btn-primary' @click = "sortArrays(button.text)">{{button.text}}</button>
+                  </span>
+              </div>
+
+              
      
-              <div class="container">
-                 <h1> Project</h1>
-                 <img src = "assets/euchre.png" alt = "euchre"/>
-                 <img src = "assets/SQL-Clone.png" alt = "SQL-Clone"/>
-                 <img src = "assets/image-processing.png" alt = "image-processing"/>
-                 <img src = "assets/piazza.png" alt = "piazza"/>
-                 <img src = "assets/asteroid.png" alt = "asteroid"/>
-                 <img src = "assets/itunes.png" alt = "itunes"/>
-                 <img src = "assets/starwars.png" alt = "starwars"/>
-                 <img src = "assets/treasure.png" alt = "treasure"/>
-                 <img src = "assets/numbers.png" alt = "numbers"/>
-     
+              <div class="containers">
+
+
+            
                  
                  
-     
+
+                 
+                    
+                  <div class = "total" v-for="project in projectFilteredArray" :key="project.id">
+                        
+                        <div class=' col-md-5 mh-10"'>
+                           <img :src="project.src">
+                        </div>
+
+
+
+                     <div>
+                        <ul class="nav nav-tabs">
+                           <li class="active"><a data-toggle="tab":href = "'#'+ project.id + 'description'">Description</a></li>
+                           <li><a data-toggle="tab" :href = "'#'+ project.id + 'trackinfo'">Languages/Frameworks</a></li>
+                        </ul>
+                        <div class="tab-content" >
+                              <div :id = "project.id + 'description'" class="tab-pane fade in active">
+                                 <ul>
+                                    <li> <strong>Artist Name: </strong> {{project.text}}</li>  
+                                    <li> <strong>Artist Name: </strong> {{project.text}}</li>  
+                                    <li> <strong>Artist Name: </strong> {{project.text}}</li>  
+                                    <li> <strong>Artist Name: </strong> {{project.text}}</li>  
+                                    <li> <strong>Artist Name: </strong> {{project.text}}</li>  
+                                 </ul>
+                              </div>
+                             
+                              <div :id = "project.id + 'trackinfo'" class="tab-pane fade">
+                                 <ul>
+                                    <li v-for = "language in project.languages" > 
+                                       <strong> {{language}} </strong> </li>  
+                                 </ul>
+                              </div>
+                        </div>
+                     </div>
+
+
+                  </div>
                 
               </div>
+              <p> Gallery for additional</p>
         </div>
         <script src="project.js"></script>
+        <script>
+         window.addEventListener('resize', () => {
+ 
+         });
+        </script>
      </body>
 
 </main>

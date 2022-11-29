@@ -1,4 +1,47 @@
 img{
-    width:10%;
-    height:10%;
+    width:100px;
+   height:100px;
+   border: black solid 2px;
+
+/*Scale down will take the necessary specified space that is 100px x 100px without stretching the image*/
+    object-fit:scale-down;
+}
+
+.containers{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: center;
+justify-items: space-between;
+justify-content: space-around;
+align-content: center;
+gap: 5%;
+   
+   
+}
+
+.total{
+    display: inline-block;
+}
+
+.containers  div{
+ flex:40%;
+ padding:2%;
+
+ 
+}
+
+.project{
+    background: blue;
+}
+
+.buttons{
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+    justify-items: space-evenly;
+   
+}
+.buttons button{
+   /* margin:20px;*/
 }

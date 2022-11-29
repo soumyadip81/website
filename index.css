@@ -1,0 +1,9 @@
+.navClass{
+   
+    justify-content: space-evenly;
+    display: flex;
+}
+
+.home{
+    background: blue;
+}
