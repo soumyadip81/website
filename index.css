@@ -7,3 +7,21 @@
 .home{
     background: blue;
 }
+
+.me{
+    height:20%;
+    width: 20%;
+    border-radius: 50%;
+}
+
+ .profilePic::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    right: 32%;
+    background-image: url(/assets/javascript.svg);
+    background-size: 60px;
+    background-repeat: no-repeat;
+    width: 90px;
+    height: 90px;
+  }

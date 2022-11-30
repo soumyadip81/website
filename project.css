@@ -7,6 +7,12 @@ img{
     object-fit:scale-down;
 }
 
+.navClass{
+   
+    justify-content: space-evenly;
+    display: flex;
+}
+
 .containers{
 display: flex;
 flex-direction: row;
