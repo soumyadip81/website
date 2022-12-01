@@ -6,8 +6,6 @@
    <!--Bootstrap-->
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
       integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
@@ -28,7 +26,7 @@
 <main>
    <body>
       <div id='app'>
-            <nav class="navbar navbar-default justify-content-between navClass">
+            <nav class="navbar navbar-default navClass">
                <a class="navbar-brand home" href="index.html">Home</a>
                <a class="navbar-brand"  href="about.html">About</a>
                <a class="navbar-brand"  href="project.html">Projects</a>
@@ -37,19 +35,52 @@
                   <button  class="btn btn-outline-success my-2 my-sm-0"  type="submit"> Search</button>
                </form>
             </nav>
-   
-            <div class="container">
-              <h1>Soumyadip Nandi</h1>
-              <h2>Software Engineer</h2>
-              <p>Front-end development experience in TypeScript and reactJs as well as coding on the Salesforce platform </p>
 
-              <div class="profilePic" >
-               <div class="icons"></div>
-               <img src = "assets/profile.png" alt = "picture of me" class = "me"/>
-              </div>
-             
-             
-            </div>
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-8">
+                     <h1>Soumyadip Nandi</h1>
+                     <h2>Software Engineer</h2>
+                     <p>Front-end development experience in TypeScript and reactJs as well as coding on the Salesforce platform </p>
+                  </div>
+
+                  <div class=" profilePic col-md-4">
+                     <div class="icons"></div>
+                     <img src = "assets/profile.png" alt = "picture of me" class = "me"/>
+                  </div>
+                </div>
+             </div>
+
+
+             <div class="row">
+               <div class="col-md-6">
+                  <div class="case-item">
+                     <img class="case-item__icon"
+                        src="assets/coding.png"
+                        alt="coding" />
+                     <div>
+                        <h3 class="title title--h4">Backend Development</h3>
+                        <p class="case-item__caption">Backend development on the Salesforce platform using Apex and SOQL queries as well experience in writing efficient code in C++</p>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Case Item -->
+               <div class="col-md-6">
+                  <div class="case-item">
+                     <img class="case-item__icon"
+                        src="assets/web-design.png"
+                        alt="web design" />
+                     <div>
+                        <h3 class="title title--h4">Web Development</h3>
+                        <p class="case-item__caption">Experienced in developing efficient and scalable web-based management systems by writing standard, well-documented, and efficient code primarily in TypeScript with the React framework.</p>
+                     </div>
+                  </div>
+               </div>
+             </div>
+   
+            
+            
 
             
       </div>

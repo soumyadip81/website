@@ -38,7 +38,8 @@ gap: 5%;
 }
 
 .project{
-    background: blue;
+    background:yellow;
+    text-decoration: underline;
 }
 
 .buttons{
@@ -47,7 +48,4 @@ gap: 5%;
     justify-content: space-evenly;
     justify-items: space-evenly;
    
-}
-.buttons button{
-   /* margin:20px;*/
 }

@@ -13,6 +13,11 @@ img{
   display: flex;
 }
 
+.about{
+  background:yellow;
+  text-decoration: underline;
+}
+
 .container{
     display: grid;
     grid-template-columns: 14% 14% 14% 14% 14% 14% 14% 14%;
