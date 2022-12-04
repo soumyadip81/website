@@ -17,77 +17,148 @@
    <script src="https://unpkg.com/vue@3"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
 
+   <script src="https://kit.fontawesome.com/4e13c5b8ff.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+
    <header>
       <a href="#main" class="skip-to-main-content-link">Skip to main content</a>
    </header>
    
-</head>
-
-<main>
-   <body>
-      <div id='app'>
-            <nav class="navbar navbar-default navClass">
-               <a class="navbar-brand home" href="index.html">Home</a>
-               <a class="navbar-brand"  href="about.html">About</a>
-               <a class="navbar-brand"  href="project.html">Projects</a>
-               <form class="form-inline">
-                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                  <button  class="btn btn-outline-success my-2 my-sm-0"  type="submit"> Search</button>
-               </form>
-            </nav>
-
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-8">
-                     <h1>Soumyadip Nandi</h1>
-                     <h2>Software Engineer</h2>
-                     <p>Front-end development experience in TypeScript and reactJs as well as coding on the Salesforce platform </p>
-                  </div>
-
-                  <div class=" profilePic col-md-4">
-                     <div class="icons"></div>
-                     <img src = "assets/profile.png" alt = "picture of me" class = "me"/>
-                  </div>
-                </div>
-             </div>
 
 
-             <div class="row">
-               <div class="col-md-6">
-                  <div class="case-item">
-                     <img class="case-item__icon"
-                        src="assets/coding.png"
-                        alt="coding" />
-                     <div>
-                        <h3 class="title title--h4">Backend Development</h3>
-                        <p class="case-item__caption">Backend development on the Salesforce platform using Apex and SOQL queries as well experience in writing efficient code in C++</p>
-                     </div>
-                  </div>
-               </div>
-
-               <!-- Case Item -->
-               <div class="col-md-6">
-                  <div class="case-item">
-                     <img class="case-item__icon"
-                        src="assets/web-design.png"
-                        alt="web design" />
-                     <div>
-                        <h3 class="title title--h4">Web Development</h3>
-                        <p class="case-item__caption">Experienced in developing efficient and scalable web-based management systems by writing standard, well-documented, and efficient code primarily in TypeScript with the React framework.</p>
-                     </div>
-                  </div>
-               </div>
-             </div>
+   <main>
    
-            
-            
+         <div id='app'>
+               <nav class="navbar navbar-default navClass">
+                  <a class="navbar-brand home" href="index.html">Home</a>
+                  <a class="navbar-brand"  href="about.html">About</a>
+                  <a class="navbar-brand"  href="project.html">Projects</a>
+                  <form class="form-inline">
+                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                     <button  class="btn btn-outline-success my-2 my-sm-0"  type="submit"> Search</button>
+                  </form>
+               </nav>
 
-            
-      </div>
-      <script src="script.js"></script>
-      <script src="sidebar.js"></script>
-   </body>
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-8">
+                        <h1>Soumyadip Nandi</h1>
+                        
+                        <p>Front-end development experience in TypeScript and reactJs as well as coding on the Salesforce platform </p>
+                     </div>
 
-</main>
+                     <div class=" profilePic col-md-4">
+                        <div class="icons"></div>
+                        <img src = "assets/profile.png" alt = "picture of me" class = "me"/>
+                     </div>
+                  </div>
+               </div>
+
+
+               <div class="row">
+                  <div class="col-md-6">
+                     <div class="case-item">
+                        <img class="case-item__icon"
+                           src="assets/coding.png"
+                           alt="coding" />
+                        <div>
+                           <h3 class="title title--h4">Backend Development</h3>
+                           <p class="case-item__caption">Backend development on the Salesforce platform using Apex and SOQL queries as well experience in writing efficient code in C++</p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- Case Item -->
+                  <div class="col-md-6">
+                     <div class="case-item">
+                        <img class="case-item__icon"
+                           src="assets/web-design.png"
+                           alt="web design" />
+                        <div>
+                           <h3 class="title title--h4">Web Development</h3>
+                           <p class="case-item__caption">Experienced in developing efficient and scalable web-based management systems by writing standard, well-documented, and efficient code primarily in TypeScript with the React framework.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+              
+
+        
+
+               
+               
+               
+               
+
+               
+         </div>
+         <script src="script.js"></script>
+         <script src="sidebar.js"></script>
+   </main>
+
+
+   <footer class="text-center text-white" style="background-color: #f1f1f1;">
+  <div class="container-footer">
+
+      
+
+      <!-- Email -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="mailto:nandis@umich.edu"
+        role="button"
+        data-mdb-ripple-color="dark"
+        target="_blank"
+        >
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+   </a>
+
+      <!-- Portfolio -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="index.html""
+        role="button"
+        data-mdb-ripple-color="dark"
+        alt = "link to portfolio home page"
+        target="_blank"
+        >
+        <i class="fas fa-briefcase"></i>
+      </a>
+
+      <!-- Linkedin -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="https://linkedin.com/in/soumyadip-nandi-966042207"
+        target="_blank"
+        role="button"
+        data-mdb-ripple-color="dark"
+        alt = "link to linkedIn profile page"
+        ><i class="fab fa-linkedin"></i
+      ></a>
+      <!-- Github -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="https://github.com/soumyadip81"
+        target="_blank"
+        role="button"
+        data-mdb-ripple-color="dark"
+        alt = "link to github home page"
+        >
+        <i class="fab fa-github"></i>
+   </a>
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2022 Copyright: Soumyadip Nandi
+  </div>
+  <!-- Copyright -->
+</footer>
+
+</body>
 
 </html>

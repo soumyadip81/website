@@ -4,6 +4,11 @@
     display: flex;
 }
 
+.container-footer{
+    justify-content: center;
+    display: flex;
+}
+
 .home{
   background:yellow;
   text-decoration: underline;
