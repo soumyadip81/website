@@ -62,9 +62,6 @@ display: block;
 .navClass{
     justify-content: space-evenly;
     display: none;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
     color: black;
 
 }
@@ -107,11 +104,6 @@ display: block;
       
       .navClass{
           justify-content: space-evenly;
-          display: flex;
-          justify-items: center;
-          align-items: center;
-          align-content: center;
-          color: black;
       
       }
 
