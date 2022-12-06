@@ -4,13 +4,24 @@ const app = createApp({})
 
 
 createApp({
+  mounted() {
+    this.determineUniqueBottons();
+  },
 
+  
+  created() {
+    window.addEventListener('resize', this.handleResize);
+    this.handleResize();
+},
+destroyed() {
+    window.removeEventListener('resize', this.handleResize);
+},
   
  
   data() {
     return {
       searchBarVal: '',
-      responseData: '',
+      responseData: 'hello',
       resultsArray: [],
       filteredresultsArray: [],
       sortValue:"Reset to Original",
@@ -32,13 +43,14 @@ createApp({
     }
   },
   methods: {
-
-    sideBarUpdate(e){
-      console.log('hello');
-  
-  }
    
-   
+    handleResize() {
+      console.log('calculating');
+      this.windowWidth = window.outerWidth
+      this.windowHeight = window.outerHeight
+      console.log(this.windowWidth);
+      console.log(this.windowHeight);
+    }
    
   
 

@@ -1,45 +1,96 @@
 img{
    height:100px;
    border: black solid 2px;
-
-/*Scale down will take the necessary specified space that is 100px x 100px without stretching the image*/
     object-fit:scale-down;
 }
 
-.navClass{
-   
-    justify-content: space-evenly;
-    display: flex;
+.project{
+    font-weight: bold;
+    text-decoration: underline;
+    border: black solid 2px;
+}
+
+.topArea{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.topArea h1,h2{
+   text-align: center;
+}
+
+.mainContent{
+    min-height: 85vh;
 }
 
 .containers{
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-align-items: center;
-justify-items: space-between;
-justify-content: space-around;
-align-content: center;
-gap: 5%;
-   
-   
-}
-
-.total{
-    display: inline-block;
-}
-
+    display: flex;
+    gap: 5%;
+    flex-wrap: wrap;
+    flex-direction: column;
+       
+    }
 .containers  div{
- flex:40%;
- padding:2%;
+    flex:80%;
+    padding:2%;
+     }
+
 
  
+
+@media screen and (min-width: 700px) {
+    .navClass{
+   
+        justify-content: space-evenly;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        color: black;
+    
+    }
+    .navClass a{
+      color:black;
+    }
+    
+
+     
+        .containers{
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        }
+
+        .containers  div{
+            flex:40%;
+            padding:2%;
+        }
+
 }
 
-.project{
-    background:yellow;
-    text-decoration: underline;
+
+
+
+@media screen and (min-width: 1000px) {
+    .navClass{
+        justify-content: space-evenly;
+        display: flex;
+    }
+
+
+    .containers{
+        
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        }
+
+        .containers  div{
+            flex:30%;
+            padding:2%;
+        }
+
 }
+
 
 .buttons{
     display: flex;
@@ -47,4 +98,13 @@ gap: 5%;
     justify-content: space-evenly;
     justify-items: space-evenly;
    
+}
+
+footer{
+    width: 100%;
+    /*height: 2.5rem; */
+
+}
+footer div{
+    width: 100%;
 }

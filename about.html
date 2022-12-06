@@ -4,6 +4,7 @@
 <head>
    <title> Portfolio</title>
    <!--Bootstrap-->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
       integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
    
@@ -21,275 +22,297 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
    <script src="https://kit.fontawesome.com/4e13c5b8ff.js" crossorigin="anonymous"></script>
 </head> 
+<div id = "about">
+   <body>
+      <header>
+         <a href="#mainContent" class="skip-to-main-content-link">Skip to main content</a>
+          <nav v-if = "windowWidth <= 800" class="navbar navbar-default">
+             <div class="container-fluid">
+             <button class="navbar-toggler-auto" type="button" data-toggle="collapse"
+                data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+             </button>
+             </div>
+          </nav>
+          <div class="collapse" id="navbarToggleExternalContent">
+             <div class="bg-light shadow-3 p-4">
+             <button class="btn btn-link btn-block border-bottom m-0">
+                <a href="index.html">Home</a>
+             </button>
+             <button class="btn btn-link btn-block border-bottom m-0">
+                <a class = "about" href="about.html">About</a>
+             </button>
+             <button class="btn btn-link btn-block m-0">
+                <a href="project.html">Projects</a>
+             </button>
+             </div>
+          </div>
 
-<body>
-
-
-   <header>
-    <a href="#main" class="skip-to-main-content-link">Skip to main content</a>
-     </header>
-
-     <main>
-
-        <div id='about'>
-              <nav class="navbar navbar-default justify-content-between navClass">
-                 <a class="navbar-brand" href="index.html">Home</a>
-                 <a class="navbar-brand about" href="about.html">About</a>
-                 <a class="navbar-brand" href="project.html">Projects</a>
-                 <form class="form-inline">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                 </form>
-              </nav>
-
-              <h1> About Me</h1>
-     
-              <div class="container">
-                 
-                
-
-
-                 <!-- Section: Timeline -->
-               <div class="education">
-                  <h2>Education</h2>
-                  
-                  <ul class="timeline">
-                  <li class="timeline-item mb-5">
-                     <h5 class="fw-bold">Bachelor of Science in Engineering</h5>
-                     <p class="text-muted mb-2 fw-bold">2020 - 2024</p>
-                     <h5 class="fw-bold">University of Michigan College of Engineering</h5>
-                     <p class="text-muted">
-                        Computer Science Relevant Coursework:
-                     </p>
-                     <ul>
-                       
-                        <li> Applied Computational Machine Learning</li>
-                        <li> Data Structures and Algorithms</li>
-                        <li> Computer Organization</li>
-                        <li> User Interface Development</li>
-                        <li> Needs Assessment and Usability Evaluation</li>
-                        <li> Building Data Driven Apps</li>
-                        <li> Linear Algebra</li>
-                        <li> Discrete Math</li>
-                        <li> Solar Energy and Wireless Systems</li>
-                        
-                     </ul>
-                     
-                   </li>
-                   
-                  </ul>
-                  
-               </div>
-               <!-- Section: Timeline -->
-               
-
-
-
-               <div class="experience">
-                  <h2>Experience</h2>
-                  <ul class="timeline">
-                  <li class="timeline-item mb-5">
-                     <h5 class="fw-bold">Bank of America</h5>
-                     <h5>Software Engineering Intern</h5>
-                     <p class="text-muted mb-2 fw-bold">June 2022 - August 2022</p>
-                     <ul>
-                       <li>
-                           Developed features on identifying customer needs and managed the loan underwriting process using the 
-                           Salesforce platform and nCino banking operating system.
-                        </li>
-                        <li>
-                           Designed Apex classes, Apex triggers, and SOQL queries to implement business 
-                           logic and functional requirements in the software application.
-                        </li>
-                        <li>
-                           Created pages on the Salesforce platform using the lightning component framework in JavaScript to 
-                           facilitate analysis and subsequent decision making associated with the loan disbursal process.
-                        </li>
-                     </ul>
-                     
-                  </li>
-               
-                  
-                  <li class="timeline-item mb-5">
-                     <h5 class="fw-bold">Rakuten</h5>
-                     <h5>Software Engineering Intern</h5>
-                     <p class="text-muted mb-2 fw-bold">May 2022 - June 2022</p>
-                     <ul>
-                       <li>
-                        Implemented features on listing hotel plans and applying discount coupons for local and global currencies in the supplier 
-                        side travel website using React.js, TypeScript, and Redux.
-                        </li>
-                        <li>
-                           Enhanced aspects of user interface by increasing website functionality and efficiency, thereby improving usability scores 
-                           and component performance by 4% based on in-house metrics.
-                        </li>
-                        <li>
-                           Designed unit and integration tests using the Jest and RTL framework while 
-                           incorporating Gherkin test scenarios.
-                        </li>
-                        <li>
-                           Resolved an average of 2 bug tickets on a weekly basis, which were all deployed to 
-                           the production repository.
-                        </li>
-                     </ul>
-                     
-                  </li>
-
-                  <li class="timeline-item mb-5">
-                     <h5 class="fw-bold">Hiroshima University BMK Digital Cognitive Neuroscience Lab</h5>
-                     <h5>Augmented Reality Development Intern</h5>
-                     <p class="text-muted mb-2 fw-bold">June 2021 - August 2021</p>
-                     <ul>
-                       <li>
-                        Developed augmented reality program that displays a filter of an EEG headset to demonstrate its ideal coordinate position on the user’s
-                        face for optimal accuracy in reading data.
-                        </li>
-                        <li>
-                           Refined precision of the facial coordinates’ display and performance of the filter’s object tracking mechanism.
-                        </li>
-                     </ul>
-                     
-                  </li>
-
-                  <li class="timeline-item mb-5">
-                     <h5 class="fw-bold">Daimler Trucks Asia – MFTBC</h5>
-                     <h5>e-Mobility Project Management Intern</h5>
-                     <p class="text-muted mb-2 fw-bold">June 2021 - August 2021</p>
-                     <ul>
-                       <li>
-                        Restructured and automated parts tracking database with over 1000 parts, 
-                        enhancing tracking efficiency by 15%.
-                        </li>
-                        <li>
-                           Streamlined data reporting across 7 divisions, which improved information 
-                           transparency and KPI visibility.
-                        </li>
-                        <li>
-                           Planned weekly meetings with a cross functional team of 20 members to improve communication, 
-                           and developed project plans to mitigate potential delays, achieving an average of 110% of the monthly parts assembly goal.
-                        </li>
-                     </ul>
-                     
-                  </li>
-                  </ul>
-               </div>
-               <!-- Section: Timeline -->
-               <div class = "skillHeader">
-                  <h2> Skills</h2>
-               </div>
             
+            <nav  v-if = "windowWidth >= 800" class="navbar navbar-default justify-content-between navClass">
+               <a  href="index.html">Home</a>
+               <a class="about" href="about.html">About</a>
+               <a  href="project.html">Projects</a>
+            </nav>
 
-               <div class = "skill1">
-                  <img src = "assets/C++.png" alt = "C++"/>
-               </div>
-               <div class = "skill2">
-                  <img src = "assets/C.png" alt = "C"/>
-               </div>
-               <div class = "skill3">
-                  <img src = "assets/reactJs.png" alt = "react"/>
-               </div>
-               <div class = "skill4">
-                  <img src = "assets/javascript.png" alt = "js"/>
-               </div>
-               <div class = "skill5">
-                  <img src = "assets/typescript.png" alt = "typescript"/>
-               </div>
-               <div class = "skill6">
-                  <img src = "assets/salesforce.png" alt = "salesforce"/>
-               </div>
-               <div class = "skill7">
-                  <img src = "assets/html.png" alt = "html"/>
-               </div>
-               <div class = "skill8">
-                  <img src = "assets/css.png" alt = "css"/>
-               </div>
-               <div class = "skill9">
-                  <img src = "assets/vueJs.png" alt = "vue"/>
-               </div>
-               <div class = "skill10">
-                  <img src = "assets/python.png" alt = "python"/>
-               </div>
-               <div class = "skill11">
-                  <img src = "assets/django.png" alt = "django"/>
-               </div>
-               <div class = "skill12">
-                  <img src = "assets/redux.png" alt = "redux"/>
-               </div>
+          
 
+            <h1> About Me</h1>
+
+      </header>
+
+
+      <div>
+          
+
+          <main id = "mainContent">
+   
+            <div class="container">
+             
                
               
 
 
-
-               
-     
-                 
-     
+               <!-- Section: Timeline -->
+                <div class="education">
+                   <h2>Education</h2>
+                   
+                   <ul class="timeline">
+                   <li class="timeline-item mb-5">
+                      <p><strong>Bachelor of Science in Engineering</strong></p>
+                      <p class="mb-2 fw-bold">2020 - 2024</p>
+                      <p><strong>University of Michigan College of Engineering</strong></p>
+                      <p>
+                         Computer Science Relevant Coursework:
+                      </p>
+                      <ul>
+                      
+                         <li> Applied Computational Machine Learning</li>
+                         <li> Data Structures and Algorithms</li>
+                         <li> Computer Organization</li>
+                         <li> User Interface Development</li>
+                         <li> Needs Assessment and Usability Evaluation</li>
+                         <li> Building Data Driven Apps</li>
+                         <li> Linear Algebra</li>
+                         <li> Discrete Math</li>
+                         <li> Solar Energy and Wireless Systems</li>
+                         
+                      </ul>
+                      
+                   </li>
+                   
+                   </ul>
+                   
+                </div>
+                <!-- Section: Timeline -->
                 
-              </div>
-        </div>
-</main>
 
-<footer class="text-center text-white" style="background-color: #f1f1f1;">
-   <div class="container-footer">
- 
-       
- 
-       <!-- Email -->
-       <a
-         class="btn btn-link btn-floating btn-lg text-dark m-1"
-         href="mailto:nandis@umich.edu"
-         role="button"
-         data-mdb-ripple-color="dark"
-         target="_blank"
-         >
-         <i class="fa fa-envelope" aria-hidden="true"></i>
-    </a>
+
+
+                <div class="experience">
+                   <h2>Experience</h2>
+                   <ul class="timeline">
+                   <li class="timeline-item mb-5">
+                      <h3 class="fw-bold">Bank of America</h3>
+                      <h4>Software Engineering Intern</h4>
+                      <p class="mb-2 fw-bold">June 2022 - August 2022</p>
+                      <ul>
+                      <li>
+                            Developed features on identifying customer needs and managed the loan underwriting process using the 
+                            Salesforce platform and nCino banking operating system.
+                         </li>
+                         <li>
+                            Designed Apex classes, Apex triggers, and SOQL queries to implement business 
+                            logic and functional requirements in the software application.
+                         </li>
+                         <li>
+                            Created pages on the Salesforce platform using the lightning component framework in JavaScript to 
+                            facilitate analysis and subsequent decision making associated with the loan disbursal process.
+                         </li>
+                      </ul>
+                      
+                   </li>
+                
+                   
+                   <li class="timeline-item mb-5">
+                      <h3 class="fw-bold">Rakuten</h3>
+                      <h4>Software Engineering Intern</h4>
+                      <p class="mb-2 fw-bold">May 2022 - June 2022</p>
+                      <ul>
+                      <li>
+                         Implemented features on listing hotel plans and applying discount coupons for local and global currencies in the supplier 
+                         side travel website using React.js, TypeScript, and Redux.
+                         </li>
+                         <li>
+                            Enhanced aspects of user interface by increasing website functionality and efficiency, thereby improving usability scores 
+                            and component performance by 4% based on in-house metrics.
+                         </li>
+                         <li>
+                            Designed unit and integration tests using the Jest and RTL framework while 
+                            incorporating Gherkin test scenarios.
+                         </li>
+                         <li>
+                            Resolved an average of 2 bug tickets on a weekly basis, which were all deployed to 
+                            the production repository.
+                         </li>
+                      </ul>
+                      
+                   </li>
+
+                   <li class="timeline-item mb-5">
+                      <h3 class="fw-bold">Hiroshima University BMK Digital Cognitive Neuroscience Lab</h3>
+                      <h4>Augmented Reality Development Intern</h4>
+                      <p class="mb-2 fw-bold">June 2021 - August 2021</p>
+                      <ul>
+                      <li>
+                         Developed augmented reality program that displays a filter of an EEG headset to demonstrate its ideal coordinate position on the user’s
+                         face for optimal accuracy in reading data.
+                         </li>
+                         <li>
+                            Refined precision of the facial coordinates’ display and performance of the filter’s object tracking mechanism.
+                         </li>
+                      </ul>
+                      
+                   </li>
+
+                   <li class="timeline-item mb-5">
+                      <h3 class="fw-bold">Daimler Trucks Asia – MFTBC</h3>
+                      <h4>e-Mobility Project Management Intern</h4>
+                      <p class="mb-2 fw-bold">June 2021 - August 2021</p>
+                      <ul>
+                      <li>
+                         Restructured and automated parts tracking database with over 1000 parts, 
+                         enhancing tracking efficiency by 15%.
+                         </li>
+                         <li>
+                            Streamlined data reporting across 7 divisions, which improved information 
+                            transparency and KPI visibility.
+                         </li>
+                         <li>
+                            Planned weekly meetings with a cross functional team of 20 members to improve communication, 
+                            and developed project plans to mitigate potential delays, achieving an average of 110% of the monthly parts assembly goal.
+                         </li>
+                      </ul>
+                      
+                   </li>
+                   </ul>
+                </div>
+                <!-- Section: Timeline -->
+                <div class = "skillHeader">
+                   <h2> Skills</h2>
+                </div>
+             
+
+                <div class = "skill1">
+                   <img src = "assets/C++.png" alt = "C++"/>
+                </div>
+                <div class = "skill2">
+                   <img src = "assets/C.png" alt = "C"/>
+                </div>
+                <div class = "skill3">
+                   <img src = "assets/reactJs.png" alt = "react"/>
+                </div>
+                <div class = "skill4">
+                   <img src = "assets/javascript.png" alt = "js"/>
+                </div>
+                <div class = "skill5">
+                   <img src = "assets/typescript.png" alt = "typescript"/>
+                </div>
+                <div class = "skill6">
+                   <img src = "assets/salesforce.png" alt = "salesforce"/>
+                </div>
+                <div class = "skill7">
+                   <img src = "assets/html.png" alt = "html"/>
+                </div>
+                <div class = "skill8">
+                   <img src = "assets/css.png" alt = "css"/>
+                </div>
+                <div class = "skill9">
+                   <img src = "assets/vueJs.png" alt = "vue"/>
+                </div>
+                <div class = "skill10">
+                   <img src = "assets/python.png" alt = "python"/>
+                </div>
+                <div class = "skill11">
+                   <img src = "assets/django.png" alt = "django"/>
+                </div>
+                <div class = "skill12">
+                   <img src = "assets/redux.png" alt = "redux"/>
+                </div>
+                
+             </div>
+             <script src="about.js"></script>
+          </main>
+      </div>
+
+
+      <footer class="text-center text-white" style="background-color: #f1f1f1;">
+      <div class="container-footer">
+
+         
+
+          <!-- Email -->
+          <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="mailto:nandis@umich.edu"
+          role="button"
+          data-mdb-ripple-color="dark"
+          target="_blank"
+          aria-label = "link email mainContent"
+          >
+             <i class="fa fa-envelope" aria-hidden="true"></i>
+          </a>
  
        <!-- Portfolio -->
        <a
-         class="btn btn-link btn-floating btn-lg text-dark m-1"
-         href="index.html""
-         role="button"
-         data-mdb-ripple-color="dark"
-         alt = "link to portfolio home page"
-         target="_blank"
-         >
-         <i class="fas fa-briefcase"></i>
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="index.html""
+          role="button"
+          data-mdb-ripple-color="dark"
+          aria-label = "link to portfolio home page"
+          target="_blank"
+          >
+          <i class="fas fa-briefcase">
+          </i>
        </a>
  
        <!-- Linkedin -->
        <a
-         class="btn btn-link btn-floating btn-lg text-dark m-1"
-         href="https://linkedin.com/in/soumyadip-nandi-966042207"
-         target="_blank"
-         role="button"
-         data-mdb-ripple-color="dark"
-         alt = "link to linkedIn profile page"
-         ><i class="fab fa-linkedin"></i
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="https://linkedin.com/in/soumyadip-nandi-966042207"
+          target="_blank"
+          role="button"
+          data-mdb-ripple-color="dark"
+          aria-label = "link to linkedIn profile page"
+          ><i class="fab fa-linkedin"></i
        ></a>
        <!-- Github -->
        <a
-         class="btn btn-link btn-floating btn-lg text-dark m-1"
-         href="https://github.com/soumyadip81"
-         target="_blank"
-         role="button"
-         data-mdb-ripple-color="dark"
-         alt = "link to github home page"
-         >
-         <i class="fab fa-github"></i>
-    </a>
-   </div>
-   <!-- Grid container -->
- 
-   <!-- Copyright -->
-   <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-     © 2022 Copyright: Soumyadip Nandi
-   </div>
-   <!-- Copyright -->
- </footer>
- 
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="https://github.com/soumyadip81"
+          target="_blank"
+          role="button"
+          data-mdb-ripple-color="dark"
+          aria-label = "link to github home page"
+          >
+          <i class="fab fa-github"></i>
+    </a>      
+      </div>
+      <!-- Grid container -->
 
-<script src="about.js"></script>
-</body>
+      <!-- Copyright -->
+      <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+         © 2022 Copyright: Soumyadip Nandi
+      </div>
+      <!-- Copyright -->
+      </footer>
+
+
+
+   </body>
+
+</div>
+
+
 </html>

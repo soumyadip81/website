@@ -2,6 +2,14 @@
    
     justify-content: space-evenly;
     display: flex;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    color: black;
+
+}
+.navClass a{
+  color:black;
 }
 
 .container-footer{
@@ -10,8 +18,9 @@
 }
 
 .home{
-  background:yellow;
+  font-weight: bold;
   text-decoration: underline;
+  border: black solid 2px;
 }
 
 

@@ -3,6 +3,7 @@
 
 <head>
    <title> Portfolio</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <!--Bootstrap-->
    
   
@@ -28,137 +29,165 @@
 </head>
 <body> 
 
+<div id = "project"> 
+   <body> 
+      <header>
+         <a href="#mainContent" class="skip-to-main-content-link">Skip to main content</a>
+         <nav v-if = "windowWidth <= 800" class="navbar navbar-default">
+            <div class="container-fluid">
+              <button class="navbar-toggler-auto" type="button" data-toggle="collapse"
+                data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+              </button>
+            </div>
+          </nav>
+          <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-light shadow-3 p-4">
+              <button class="btn btn-link btn-block border-bottom m-0">
+               <a href="index.html">Home</a>
+            </button>
+              <button class="btn btn-link btn-block border-bottom m-0">
+               <a href="about.html">About</a>
+            </button>
+              <button class="btn btn-link btn-block m-0">
+               <a class="project" href="project.html">Projects</a>
+            </button>
+            </div>
+          </div>
 
-   <header>
-    <a href="#main" class="skip-to-main-content-link">Skip to main content</a>
-    </header>
 
-   <main>
-         <div id='project'>
-               <nav class="navbar navbar-default justify-content-between navClass">
-                  <a onclick="sideBarUpdate(this)" class="navbar-brand" href="index.html">Home</a>
-                  <a class="navbar-brand" href="about.html">About</a>
-                  <a class="navbar-brand project" href="project.html">Projects</a>
-                  <form class="form-inline">
-                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                  </form>
-               </nav>
-               <h1> Projects</h1>
-               <p> These are some of the projects I have worked on. Please feel free to look over them and sort them based on
-                  languages and frameworks used.
-               </p>
+            <nav v-if = "windowWidth >= 800" class="navbar navbar-default justify-content-between navClass">
+               <a href="index.html">Home</a>
+               <a href="about.html">About</a>
+               <a class ="project" href="project.html">Projects</a>
+            </nav>
+      </header>
 
-               <div class = "buttons">
-                     <span v-for = "button in buttonArray">
-                        <button  v-if = "button.selected === true" class = 'btn btn-success' @click = "sortArrays(button.text)">{{button.text}}</button>
-                        <button  v-if = "button.selected === false" class = 'btn btn-primary' @click = "sortArrays(button.text)">{{button.text}}</button>
-                     </span>
+
+   <main id = mainContent>
+      <div>
+            <div class = "topArea">
+
+               <h1> My Projects</h1>
+               <h2> Projects displayed: {{projectFilteredArray.length}}</h2>
+
+               <div v-if = "windowWidth < 800" class="dropdown show">
+
+                  <div class="dropdown">
+                  <button class="btn btn-info dropdown-toggle text-dark" type="button" data-toggle="dropdown"> Project Languages
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                     <li v-for = "button in buttonArray">
+                        <a  v-if = "button.selected === true" class = 'btn-success' @click = "sortArrays(button.text)">{{button.text}}</a>
+                        <a  v-if = "button.selected === false" class = 'btn-primary' @click = "sortArrays(button.text)">{{button.text}}</a>
+                     </li>
+                  </ul>
                </div>
 
-               
-      
+            </div>
+            
+
+            <div v-if = "windowWidth >= 800" class = "buttons">
+                  <span v-for = "button in buttonArray">
+                     <button  v-if = "button.selected === true" class = 'btn btn-success' @click = "sortArrays(button.text)">{{button.text}}</button>
+                     <button  v-if = "button.selected === false" class = 'btn btn-primary' @click = "sortArrays(button.text)">{{button.text}}</button>
+                  </span>
+            </div>
+
+            <div class = "mainContent">
                <div class="containers">
-
-
-               
-                  
-                  
-
-                  
-                     
-                     <div class = "total" v-for="project in projectFilteredArray" :key="project.id">
-                           
-                           <div class=' col-md-5 mh-10"'>
-                              <img :src="project.src">
-                           </div>
-
-
-
-                        <div>
-                           <ul class="nav nav-tabs">
-                              <li class="active"><a data-toggle="tab":href = "'#'+ project.id + 'description'">Description</a></li>
-                              <li><a data-toggle="tab" :href = "'#'+ project.id + 'trackinfo'">Languages/Frameworks</a></li>
-                           </ul>
-                           <div class="tab-content" >
-                                 <div :id = "project.id + 'description'" class="tab-pane fade in active">
-                                    <p><strong>{{project.text}}</strong></p>
-                                    <p>{{project.description}}</p>
-                                 </div>
-                              
-                                 <div :id = "project.id + 'trackinfo'" class="tab-pane fade">
-                                    <ul>
-                                       <li v-for = "language in project.languages" > 
-                                          <strong> {{language}} </strong> </li>  
-                                    </ul>
-                                 </div>
-                           </div>
+                  <div class = "total" v-for="project in projectFilteredArray" :key="project.id">
+                        
+                        <div class='imageDiv'>
+                           <img :src="project.src" :alt = "project.alt">
                         </div>
 
 
-                     </div>
-                  
-               </div>
-         </div>
-         <script src="project.js"></script>
-         <script>
-            window.addEventListener('resize', () => {
-   
-            });
-         </script>
 
+                     <div>
+                        <ul class="nav nav-tabs">
+                           <li class="active"><a data-toggle="tab":href = "'#'+ project.id + 'description'">Description</a></li>
+                           <li><a data-toggle="tab" :href = "'#'+ project.id + 'trackinfo'">Languages/Frameworks</a></li>
+                        </ul>
+                        <div class="tab-content" >
+                              <div :id = "project.id + 'description'" class="tab-pane fade in active">
+                                 <p><strong>{{project.text}}</strong></p>
+                                 <p>{{project.description}}</p>
+                              </div>
+                           
+                              <div :id = "project.id + 'trackinfo'" class="tab-pane fade">
+                                 <ul>
+                                    <li v-for = "language in project.languages" > 
+                                       <strong> {{language}} </strong> </li>  
+                                 </ul>
+                              </div>
+                        </div>
+                     </div>
+
+
+                  </div>
+
+            </div>
+
+            
+   
+            
+               
+            </div>
+      </div>
+      <script src="project.js"></script>
    </main>
 
    <footer class="text-center text-white" style="background-color: #f1f1f1;">
       <div class="container-footer">
-    
-          
-    
-          <!-- Email -->
-          <a
-            class="btn btn-link btn-floating btn-lg text-dark m-1"
-            href="mailto:nandis@umich.edu"
-            role="button"
-            data-mdb-ripple-color="dark"
-            target="_blank"
-            >
+            <!-- Email -->
+         <a
+         class="btn btn-link btn-floating btn-lg text-dark m-1"
+         href="mailto:nandis@umich.edu"
+         role="button"
+         data-mdb-ripple-color="dark"
+         target="_blank"
+         aria-label = "link email mainContent"
+         >
             <i class="fa fa-envelope" aria-hidden="true"></i>
-       </a>
-    
-          <!-- Portfolio -->
-          <a
-            class="btn btn-link btn-floating btn-lg text-dark m-1"
-            href="index.html""
-            role="button"
-            data-mdb-ripple-color="dark"
-            alt = "link to portfolio home page"
-            target="_blank"
-            >
-            <i class="fas fa-briefcase"></i>
-          </a>
-    
-          <!-- Linkedin -->
-          <a
-            class="btn btn-link btn-floating btn-lg text-dark m-1"
-            href="https://linkedin.com/in/soumyadip-nandi-966042207"
-            target="_blank"
-            role="button"
-            data-mdb-ripple-color="dark"
-            alt = "link to linkedIn profile page"
-            ><i class="fab fa-linkedin"></i
-          ></a>
-          <!-- Github -->
-          <a
-            class="btn btn-link btn-floating btn-lg text-dark m-1"
-            href="https://github.com/soumyadip81"
-            target="_blank"
-            role="button"
-            data-mdb-ripple-color="dark"
-            alt = "link to github home page"
-            >
-            <i class="fab fa-github"></i>
-       </a>
-      </div>
+         </a>
+
+      <!-- Portfolio -->
+      <a
+         class="btn btn-link btn-floating btn-lg text-dark m-1"
+         href="index.html""
+         role="button"
+         data-mdb-ripple-color="dark"
+         aria-label = "link to portfolio home page"
+         target="_blank"
+         >
+         <i class="fas fa-briefcase">
+         </i>
+      </a>
+
+      <!-- Linkedin -->
+      <a
+         class="btn btn-link btn-floating btn-lg text-dark m-1"
+         href="https://linkedin.com/in/soumyadip-nandi-966042207"
+         target="_blank"
+         role="button"
+         data-mdb-ripple-color="dark"
+         aria-label = "link to linkedIn profile page"
+         ><i class="fab fa-linkedin"></i
+      ></a>
+      <!-- Github -->
+      <a
+         class="btn btn-link btn-floating btn-lg text-dark m-1"
+         href="https://github.com/soumyadip81"
+         target="_blank"
+         role="button"
+         data-mdb-ripple-color="dark"
+         aria-label = "link to github home page"
+         >
+         <i class="fab fa-github"></i>
+   </a>      
+</div>
       <!-- Grid container -->
     
       <!-- Copyright -->
@@ -168,6 +197,18 @@
       <!-- Copyright -->
     </footer>
 
-</body>
+
+
+   </body>
+
+</div>
+
+
+        
+
+
+  
+
+
 
 </html>

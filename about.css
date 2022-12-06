@@ -1,136 +1,290 @@
 img{
-    width:100px;
-   height:100px;
-   border: black solid 2px;
+  width:100px;
+ height:100px;
+ border: black solid 2px;
 
 /*Scale down will take the necessary specified space that is 100px x 100px without stretching the image*/
-    object-fit:scale-down;
+  object-fit:scale-down;
 }
 
+header h1{
+  text-align: center;
+}
 .navClass{
-   
-  justify-content: space-evenly;
-  display: flex;
+ 
+justify-content: space-evenly;
+display: flex;
 }
 
 .about{
-  background:yellow;
-  text-decoration: underline;
+font-weight: bold;
+text-decoration: underline;
+border: black solid 2px;
 }
 
 .container{
-    display: grid;
-    grid-template-columns: 14% 14% 14% 14% 14% 14% 14% 14%;
-    margin-left: 75px;
-    margin-right: 75px;
-    margin-bottom: 50px;
-    row-gap:20px;
+  display: grid;
+  grid-template-columns: 14% 14% 14% 14% 14% 14% 14% 14%;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  grid-gap:5px;
 }
 .timeline {
-    border-left: 1px solid hsl(0, 0%, 90%);
-    position: relative;
-    list-style: none;
-  }
-  
-  .timeline .timeline-item {
-    position: relative;
-  }
-  
-  .timeline .timeline-item:after {
-    position: absolute;
-    display: block;
-    top: 0;
-  }
-  
-  .timeline .timeline-item:after {
-    background-color: hsl(0, 0%, 90%);
-    left: -46px;
-    border-radius: 50%;
-    height: 11px;
-    width: 11px;
-    content: "";
-  }
+  border-left: 1px solid hsl(0, 0%, 90%);
+  position: relative;
+  list-style: none;
+}
 
-  .education{
-    grid-column-start: 1;
-    grid-column-end: 4;
-  }
+.timeline .timeline-item {
+  position: relative;
+}
 
+.timeline .timeline-item:after {
+  position: absolute;
+  display: block;
+  top: 0;
+}
+
+.timeline .timeline-item:after {
+  background-color: hsl(0, 0%, 90%);
+  left: -46px;
+  border-radius: 50%;
+  height: 11px;
+  width: 11px;
+  content: "";
+}
+
+.education{
+  grid-column: 1 / span 3;
+}
+
+.experience{
+  grid-column: 5 / span 3;
+}
+
+
+.skillHeader{
+  text-align: center;
+  grid-column-start: 4;
+  grid-column-end: 6;
+}
+
+
+.skill1{
+  grid-row-start: 4;
+  grid-column: 3 / span 1;
+}
+.skill2{
+  grid-row-start: 4;
+  grid-column: 5 / span 1;
+}
+
+.skill5{
+  grid-row-start: 5;
+  grid-column: 3 / span 1;
+}
+.skill6{
+  grid-row-start: 5;
+  grid-column: 5 / span 1;
+}
+.skill11{
+  grid-row-start: 6;
+  grid-column: 5 / span 1;
+}
+.skill7{
+  grid-row-start: 6;
+  grid-column: 3 / span 1;
+}
+.skill8{
+  grid-row-start: 7;
+  grid-column: 3 / span 1;
+}
+.skill9{
+  grid-row-start: 7;
+  grid-column: 5 / span 1;
+}
+.skill4{
+  grid-row-start: 8;
+  grid-column: 3 / span 1;
+}
+.skill12{
+  grid-row-start: 8;
+  grid-column: 5 / span 1;
+}
+.skill10{
+  grid-row-start: 9;
+  grid-column: 3 / span 1;
+}
+.skill3{
+  grid-row-start: 9;
+  grid-column: 5 / span 1;
+}
+
+  
+
+  @media screen and (min-width: 700px) {
+    .navClass{
+   
+      justify-content: space-evenly;
+      display: flex;
+      justify-items: center;
+      align-items: center;
+      align-content: center;
+      color: black;
+  
+  }
+  .navClass a{
+    color:black;
+  }
+  
+
+    .skill1{
+      grid-row-start: 4;
+      grid-column: 3 / span 1;
+    }
+    .skill2{
+      grid-row-start: 4;
+      grid-column: 5 / span 1;
+    }
+    
+    .skill3{
+      grid-row-start: 4;
+      grid-column: 7 / span 1;
+    }
+    .skill5{
+      grid-row-start: 5;
+      grid-column: 3 / span 1;
+    }
+    .skill6{
+      grid-row-start: 5;
+      grid-column: 5 / span 1;
+    }
+
+    .skill10{
+      grid-row-start: 5;
+      grid-column: 7 / span 1;
+    }
+    .skill11{
+      grid-row-start: 6;
+      grid-column: 5 / span 1;
+    }
+    .skill7{
+      grid-row-start: 6;
+      grid-column: 3 / span 1;
+    }
+
+    .skill12{
+      grid-row-start: 6;
+      grid-column: 7 / span 1;
+    }
+    .skill8{
+      grid-row-start: 7;
+      grid-column: 3 / span 1;
+    }
+    .skill9{
+      grid-row-start: 7;
+      grid-column: 5 / span 1;
+    }
+    .skill4{
+      grid-row-start: 7;
+      grid-column: 7 / span 1;
+    }
+    
+    
+    
+
+     
+}
+
+
+
+
+@media screen and (min-width: 1000px) {
+    .navClass{
+        justify-content: space-evenly;
+        display: flex;
+    }
+    /*
+    .experience{
+      grid-column: 5 / span 4;
+    }*/
+    
+
+    .skill10{
+      grid-row-start: 4;
+      grid-column: 1 / span 1;
+    }
+  
+    .skill1{
+      grid-row-start: 4;
+      grid-column: 3 / span 1;
+    }
+    .skill2{
+      grid-row-start: 4;
+      grid-column: 5 / span 1;
+    }
+    .skill3{
+      grid-row-start: 4;
+      grid-column: 7 / span 1;
+    }
+    .skill4{
+      grid-row-start: 5;
+      grid-column: 2 / span 1;
+    }
+    .skill5{
+      grid-row-start: 5;
+      grid-column: 4 / span 1;
+    }
+    .skill6{
+      grid-row-start: 5;
+      grid-column: 6 / span 1;
+    }
+    
+  
+    .skill12{
+      grid-row-start: 7;
+      grid-column: 4 / span 1;
+    }
+    .skill11{
+      grid-row-start: 6;
+      grid-column: 1 / span 1;
+    }
+    .skill7{
+      grid-row-start: 6;
+      grid-column: 3 / span 1;
+    }
+    .skill8{
+      grid-row-start: 6;
+      grid-column: 5 / span 1;
+    }
+    .skill9{
+      grid-row-start: 6;
+      grid-column: 7 / span 1;
+    }
+   
+  
+}
+
+@media screen and (min-width: 1300px) {
+  .navClass{
+      justify-content: space-evenly;
+      display: flex;
+  }
+  
   .experience{
-    grid-column-start: 5;
-    grid-column-end: 9;
+    grid-column: 5 / span 4;
   }
-
- 
-  .skillHeader{
-    text-align: center;
-    grid-column-start: 4;
-    grid-column-end: 6;
-  }
-  .skill10{
-    grid-row-start: 4;
-    grid-column-start: 1;
-    grid-column-end: 2;
-  }
-
-  .skill1{
-    grid-row-start: 4;
-    grid-column-start: 3;
-    grid-column-end: 4;
-  }
-  .skill2{
-    grid-row-start: 4;
-    grid-column-start: 5;
-    grid-column-end: 6;
-  }
-  .skill3{
-    grid-row-start: 4;
-    grid-column-start: 7;
-    grid-column-end: 8;
-  }
-  .skill4{
-    grid-row-start: 5;
-    grid-column-start: 2;
-    grid-column-end: 3;
-  }
-  .skill5{
-    grid-row-start: 5;
-    grid-column-start: 4;
-    grid-column-end: 5;
-  }
-  .skill6{
-    grid-row-start: 5;
-    grid-column-start: 6;
-    grid-column-end: 7;
-  }
-  
-
   .skill12{
     grid-row-start: 5;
-    grid-column-start: 8;
-    grid-column-end: 9;
+    grid-column: 8 / span 1;
   }
-  .skill11{
-    grid-row-start: 6;
-    grid-column-start: 1;
-    grid-column-end: 2;
-  }
-  .skill7{
-    grid-row-start: 6;
-    grid-column-start: 3;
-    grid-column-end: 4;
-  }
-  .skill8{
-    grid-row-start: 6;
-    grid-column-start: 5;
-    grid-column-end: 6;
-  }
-  .skill9{
-    grid-row-start: 6;
-    grid-column-start: 7;
-    grid-column-end: 8;
-  }
+  
+
+  
  
+
+}
  
   
   

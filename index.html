@@ -21,26 +21,47 @@
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
-<body>
 
+<div id = 'app'>
+
+   <body>
    <header>
-      <a href="#main" class="skip-to-main-content-link">Skip to main content</a>
+      <a href="#mainContent" class="skip-to-main-content-link">Skip to main content</a>
+      <nav v-if = "windowWidth <= 800" class="navbar navbar-default">
+         <div class="container-fluid">
+         <button class="navbar-toggler-auto" type="button" data-toggle="collapse"
+            data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+         </button>
+         </div>
+      </nav>
+      <div class="collapse" id="navbarToggleExternalContent">
+         <div class="bg-light shadow-3 p-4">
+         <button class="btn btn-link btn-block border-bottom m-0">
+            <a class = "home" href="index.html">Home</a>
+         </button>
+         <button class="btn btn-link btn-block border-bottom m-0">
+            <a href="about.html">About</a>
+         </button>
+         <button class="btn btn-link btn-block m-0">
+            <a href="project.html">Projects</a>
+         </button>
+         </div>
+      </div>
+
+      <nav v-if = "windowWidth >= 800"class="navbar navbar-default navClass">
+         <a class="home" href="index.html">Home</a>
+         <a href="about.html">About</a>
+         <a href="project.html">Projects</a>
+      </nav>
    </header>
-   
 
-
-   <main>
+   <main id = "mainContent">
    
-         <div id='app'>
-               <nav class="navbar navbar-default navClass">
-                  <a class="navbar-brand home" href="index.html">Home</a>
-                  <a class="navbar-brand"  href="about.html">About</a>
-                  <a class="navbar-brand"  href="project.html">Projects</a>
-                  <form class="form-inline">
-                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                     <button  class="btn btn-outline-success my-2 my-sm-0"  type="submit"> Search</button>
-                  </form>
-               </nav>
+         <div>
+               
+              
 
                <div class="container">
                   <div class="row">
@@ -112,9 +133,10 @@
         role="button"
         data-mdb-ripple-color="dark"
         target="_blank"
+        aria-label = "link email mainContent"
         >
         <i class="fa fa-envelope" aria-hidden="true"></i>
-   </a>
+      </a>
 
       <!-- Portfolio -->
       <a
@@ -122,10 +144,11 @@
         href="index.html""
         role="button"
         data-mdb-ripple-color="dark"
-        alt = "link to portfolio home page"
+        aria-label = "link to portfolio home page"
         target="_blank"
         >
-        <i class="fas fa-briefcase"></i>
+        <i class="fas fa-briefcase">
+        </i>
       </a>
 
       <!-- Linkedin -->
@@ -135,7 +158,7 @@
         target="_blank"
         role="button"
         data-mdb-ripple-color="dark"
-        alt = "link to linkedIn profile page"
+        aria-label = "link to linkedIn profile page"
         ><i class="fab fa-linkedin"></i
       ></a>
       <!-- Github -->
@@ -145,7 +168,7 @@
         target="_blank"
         role="button"
         data-mdb-ripple-color="dark"
-        alt = "link to github home page"
+        aria-label = "link to github home page"
         >
         <i class="fab fa-github"></i>
    </a>
@@ -160,5 +183,9 @@
 </footer>
 
 </body>
+
+</div>
+
+
 
 </html>
