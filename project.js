@@ -67,12 +67,11 @@ projectFilteredArray:[
         }
       }
       this.buttons.forEach(key => {
-        console.log(key);
+       
         this.buttonArray.push({text: key, selected:false});
       }
         );
-     console.log(this.buttonArray);
-
+     
     },
 
     sortArrays(val){
@@ -121,12 +120,12 @@ projectFilteredArray:[
            this.languages.add(this.buttonArray[i].text);
           }
         }
-        console.log(this.languages);
+       
 
         this.projectFilteredArray = [...this.projectArray];
         this.projectFilteredArray = this.projectFilteredArray.filter(this.filterCondition);
 
-        console.log(this.projectFilteredArray);
+      
       }
 
     },
@@ -144,11 +143,10 @@ projectFilteredArray:[
     },
 
     handleResize() {
-      console.log('calculating');
+      
       this.windowWidth = window.outerWidth
       this.windowHeight = window.outerHeight
-      console.log(this.windowWidth);
-      console.log(this.windowHeight);
+     
     }
    
    

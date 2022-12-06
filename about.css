@@ -21,8 +21,6 @@ img{
   width:100px;
  height:100px;
  border: black solid 2px;
-
-/*Scale down will take the necessary specified space that is 100px x 100px without stretching the image*/
   object-fit:scale-down;
 }
 
@@ -235,6 +233,10 @@ border: black solid 2px;
   .small{
     display: none;
   }
+
+  .collapse{
+    display: none;
+}
   
   
   
@@ -307,7 +309,6 @@ border: black solid 2px;
 @media screen and (min-width: 1300px) {
   .navClass{
       justify-content: space-evenly;
-      display: flex;
   }
   
   .experience{
