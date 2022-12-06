@@ -32,19 +32,28 @@
 nav{
   width: 100%;
 }
-.navClass{
-   
-    justify-content: space-evenly;
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
-    color: black;
 
-}
-.navClass a{
-  color:black;
-}
+
+
+.small{
+  display: block;
+  }
+  
+  
+  
+  .navClass{
+      justify-content: space-evenly;
+      display: none;
+      justify-items: center;
+      align-items: center;
+      align-content: center;
+      color: black;
+  
+  }
+  
+  .navClass a{
+      color:black;
+    }
 
 .container-footer{
     justify-content: center;
@@ -159,3 +168,20 @@ nav{
   }
 
   
+  @media screen and (min-width: 1000px) {
+    .small{
+        display: none;
+      }
+      
+      
+      
+      .navClass{
+          justify-content: space-evenly;
+          display: flex;
+          justify-items: center;
+          align-items: center;
+          align-content: center;
+          color: black;
+      
+      }
+}

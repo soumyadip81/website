@@ -29,11 +29,26 @@ img{
 header h1{
   text-align: center;
 }
-.navClass{
- 
-justify-content: space-evenly;
-display: flex;
+
+.small{
+  display: block;
 }
+  
+  
+  
+.navClass{
+    justify-content: space-evenly;
+    display: none;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    color: black;
+
+}
+  
+.navClass a{
+    color:black;
+ }
 
 .about{
 font-weight: bold;
@@ -153,19 +168,6 @@ border: black solid 2px;
       grid-column-start: 4;
       grid-column-end: 6;
     }
-    .navClass{
-   
-      justify-content: space-evenly;
-      display: flex;
-      justify-items: center;
-      align-items: center;
-      align-content: center;
-      color: black;
-  
-  }
-  .navClass a{
-    color:black;
-  }
   
 
     .skill1{
@@ -230,14 +232,21 @@ border: black solid 2px;
 
 
 @media screen and (min-width: 1000px) {
-    .navClass{
-        justify-content: space-evenly;
-        display: flex;
-    }
-    /*
-    .experience{
-      grid-column: 5 / span 4;
-    }*/
+  .small{
+    display: none;
+  }
+  
+  
+  
+  .navClass{
+      justify-content: space-evenly;
+      display: flex;
+      justify-items: center;
+      align-items: center;
+      align-content: center;
+      color: black;
+  
+  }
     
 
     .skill10{

@@ -6,6 +6,8 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" type="text/css" href="html5reset.css">
+   <link rel="stylesheet" type="text/css" href="project.css">
    <!--Bootstrap-->
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
       integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -20,8 +22,7 @@
       integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
       crossorigin="anonymous"></script>
    <!--Custom Style-->
-   <link rel="stylesheet" type="text/css" href="html5reset.css">
-   <link rel="stylesheet" type="text/css" href="index.css">
+   
    
    <!--Vue-->
    <script src="https://unpkg.com/vue@3"></script>
@@ -37,7 +38,7 @@
    <body>
       <header>
          <a href="#mainContent" class="skip-to-main-content-link">Skip to main content</a>
-         <nav v-if = "windowWidth <= 800" class="navbar navbar-default">
+         <nav class="navbar navbar-default small">
             <div class="container-fluid">
             <button class="navbar-toggler-auto" type="button" data-toggle="collapse"
                data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
@@ -60,7 +61,7 @@
             </div>
          </div>
 
-         <nav v-if = "windowWidth >= 800"class="navbar navbar-default justify-content-between navClass">
+         <nav class="navbar navbar-default justify-content-between navClass">
             <a class="home" href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="project.html">Projects</a>

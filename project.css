@@ -53,19 +53,29 @@ img{
      }
 
 
+.small{
+display: block;
+}
+
+
+
+.navClass{
+    justify-content: space-evenly;
+    display: none;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    color: black;
+
+}
+
+.navClass a{
+    color:black;
+  }
  
 
 @media screen and (min-width: 700px) {
-    .navClass{
-   
-        justify-content: space-evenly;
-        display: flex;
-        justify-items: center;
-        align-items: center;
-        align-content: center;
-        color: black;
     
-    }
     .navClass a{
       color:black;
     }
@@ -89,10 +99,21 @@ img{
 
 
 @media screen and (min-width: 1000px) {
-    .navClass{
-        justify-content: space-evenly;
-        display: flex;
-    }
+    .small{
+        display: none;
+      }
+      
+      
+      
+      .navClass{
+          justify-content: space-evenly;
+          display: flex;
+          justify-items: center;
+          align-items: center;
+          align-content: center;
+          color: black;
+      
+      }
 
 
     .containers{

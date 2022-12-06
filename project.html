@@ -38,7 +38,7 @@
    <body> 
       <header>
          <a href="#mainContent" class="skip-to-main-content-link">Skip to main content</a>
-         <nav v-if = "windowWidth <= 800" class="navbar navbar-default">
+         <nav class="navbar navbar-default small">
             <div class="container-fluid">
               <button class="navbar-toggler-auto" type="button" data-toggle="collapse"
                 data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
@@ -62,7 +62,7 @@
           </div>
 
 
-            <nav v-if = "windowWidth >= 800" class="navbar navbar-default justify-content-between navClass">
+            <nav  class="navbar navbar-default justify-content-between navClass">
                <a href="index.html">Home</a>
                <a href="about.html">About</a>
                <a class ="project" href="project.html">Projects</a>
@@ -77,7 +77,7 @@
                <h1> My Projects</h1>
                <h2> Projects displayed: {{projectFilteredArray.length}}</h2>
 
-               <div v-if = "windowWidth < 800" class="dropdown show">
+               <div v-if = "windowWidth < 1000" class="dropdown show">
 
                   <div class="dropdown">
                   <button class="btn btn-info dropdown-toggle text-dark" type="button" data-toggle="dropdown"> Project Languages
@@ -93,7 +93,7 @@
             </div>
             
 
-            <div v-if = "windowWidth >= 800" class = "buttons">
+            <div v-if = "windowWidth >= 1000" class = "buttons">
                   <span v-for = "button in buttonArray">
                      <button  v-if = "button.selected === true" class = 'btn btn-success' @click = "sortArrays(button.text)">{{button.text}}</button>
                      <button  v-if = "button.selected === false" class = 'btn btn-primary' @click = "sortArrays(button.text)">{{button.text}}</button>
