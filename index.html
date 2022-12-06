@@ -3,16 +3,26 @@
 
 <head>
    <title> Portfolio</title>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <!--Bootstrap-->
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
       integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+   
+    
+   
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
       integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
       crossorigin="anonymous"></script>
    <!--Custom Style-->
+   <link rel="stylesheet" type="text/css" href="html5reset.css">
    <link rel="stylesheet" type="text/css" href="index.css">
+   
    <!--Vue-->
    <script src="https://unpkg.com/vue@3"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
@@ -25,162 +35,163 @@
 <div id = 'app'>
 
    <body>
-   <header>
-      <a href="#mainContent" class="skip-to-main-content-link">Skip to main content</a>
-      <nav v-if = "windowWidth <= 800" class="navbar navbar-default">
-         <div class="container-fluid">
-         <button class="navbar-toggler-auto" type="button" data-toggle="collapse"
-            data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-bars"></i>
-         </button>
+      <header>
+         <a href="#mainContent" class="skip-to-main-content-link">Skip to main content</a>
+         <nav v-if = "windowWidth <= 800" class="navbar navbar-default">
+            <div class="container-fluid">
+            <button class="navbar-toggler-auto" type="button" data-toggle="collapse"
+               data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+               aria-expanded="false" aria-label="Toggle navigation">
+               <i class="fas fa-bars"></i>
+            </button>
+            </div>
+         </nav>
+         <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-light shadow-3 p-4">
+            <button class="btn btn-link btn-block border-bottom m-0">
+               <a class = "home" href="index.html">Home</a>
+            </button>
+            <button class="btn btn-link btn-block border-bottom m-0">
+               <a href="about.html">About</a>
+            </button>
+            <button class="btn btn-link btn-block m-0">
+               <a href="project.html">Projects</a>
+            </button>
+            </div>
          </div>
-      </nav>
-      <div class="collapse" id="navbarToggleExternalContent">
-         <div class="bg-light shadow-3 p-4">
-         <button class="btn btn-link btn-block border-bottom m-0">
-            <a class = "home" href="index.html">Home</a>
-         </button>
-         <button class="btn btn-link btn-block border-bottom m-0">
+
+         <nav v-if = "windowWidth >= 800"class="navbar navbar-default justify-content-between navClass">
+            <a class="home" href="index.html">Home</a>
             <a href="about.html">About</a>
-         </button>
-         <button class="btn btn-link btn-block m-0">
             <a href="project.html">Projects</a>
-         </button>
-         </div>
-      </div>
+         </nav>
+      </header>
 
-      <nav v-if = "windowWidth >= 800"class="navbar navbar-default navClass">
-         <a class="home" href="index.html">Home</a>
-         <a href="about.html">About</a>
-         <a href="project.html">Projects</a>
-      </nav>
-   </header>
-
-   <main id = "mainContent">
-   
-         <div>
-               
-              
-
-               <div class="container">
-                  <div class="row">
-                     <div class="col-md-8">
-                        <h1>Soumyadip Nandi</h1>
-                        
-                        <p>Front-end development experience in TypeScript and reactJs as well as coding on the Salesforce platform </p>
-                     </div>
-
-                     <div class=" profilePic col-md-4">
-                        <div class="icons"></div>
-                        <img src = "assets/profile.png" alt = "picture of me" class = "me"/>
-                     </div>
-                  </div>
-               </div>
-
-
-               <div class="row">
-                  <div class="col-md-6">
-                     <div class="case-item">
-                        <img class="case-item__icon"
-                           src="assets/coding.png"
-                           alt="coding" />
-                        <div>
-                           <h3 class="title title--h4">Backend Development</h3>
-                           <p class="case-item__caption">Backend development on the Salesforce platform using Apex and SOQL queries as well experience in writing efficient code in C++</p>
-                        </div>
-                     </div>
-                  </div>
-
-                  <!-- Case Item -->
-                  <div class="col-md-6">
-                     <div class="case-item">
-                        <img class="case-item__icon"
-                           src="assets/web-design.png"
-                           alt="web design" />
-                        <div>
-                           <h3 class="title title--h4">Web Development</h3>
-                           <p class="case-item__caption">Experienced in developing efficient and scalable web-based management systems by writing standard, well-documented, and efficient code primarily in TypeScript with the React framework.</p>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-              
-
-        
-
-               
-               
-               
-               
-
-               
-         </div>
-         <script src="script.js"></script>
-         <script src="sidebar.js"></script>
-   </main>
-
-
-   <footer class="text-center text-white" style="background-color: #f1f1f1;">
-  <div class="container-footer">
-
+      <main id = "mainContent">
       
+            <div>
+                  
+               
 
-      <!-- Email -->
-      <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
-        href="mailto:nandis@umich.edu"
-        role="button"
-        data-mdb-ripple-color="dark"
-        target="_blank"
-        aria-label = "link email mainContent"
-        >
-        <i class="fa fa-envelope" aria-hidden="true"></i>
-      </a>
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-md-8 .col-xs-8" >
+                           <h1>Soumyadip Nandi</h1>
+                           
+                           <p>Front-end development experience in TypeScript and reactJs as well as coding on the Salesforce platform </p>
+                        </div>
 
-      <!-- Portfolio -->
-      <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
-        href="index.html""
-        role="button"
-        data-mdb-ripple-color="dark"
-        aria-label = "link to portfolio home page"
-        target="_blank"
-        >
-        <i class="fas fa-briefcase">
-        </i>
-      </a>
+                        <div class=" profilePic col-md-4">
+                           <div class="icons"></div>
+                           <img src = "assets/profile.png" alt = "picture of me" class = "me"/>
+                        </div>
+                     </div>
+                  </div>
 
-      <!-- Linkedin -->
-      <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
-        href="https://linkedin.com/in/soumyadip-nandi-966042207"
-        target="_blank"
-        role="button"
-        data-mdb-ripple-color="dark"
-        aria-label = "link to linkedIn profile page"
-        ><i class="fab fa-linkedin"></i
-      ></a>
-      <!-- Github -->
-      <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
-        href="https://github.com/soumyadip81"
-        target="_blank"
-        role="button"
-        data-mdb-ripple-color="dark"
-        aria-label = "link to github home page"
-        >
-        <i class="fab fa-github"></i>
-   </a>
-  </div>
-  <!-- Grid container -->
 
-  <!-- Copyright -->
-  <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2022 Copyright: Soumyadip Nandi
-  </div>
-  <!-- Copyright -->
-</footer>
+                  <div class="row">
+                     <div class="col-md-6 .col-xs-6">
+                        <div class="case-item">
+                           <img class="case-item__icon"
+                              src="assets/coding.png"
+                              alt="coding" />
+                           <div>
+                              <h3 class="title title--h4">Backend Development</h3>
+                              <p class="case-item__caption">Backend development on the Salesforce platform using Apex and SOQL queries as well experience in writing efficient code in C++</p>
+                           </div>
+                        </div>
+                     </div>
+
+                     <!-- Case Item -->
+                     <div class="col-md-6">
+                        <div class="case-item">
+                           <img class="case-item__icon"
+                              src="assets/web-design.png"
+                              alt="web design" />
+                           <div>
+                              <h3 class="title title--h4">Web Development</h3>
+                              <p class="case-item__caption">Experienced in developing efficient and scalable web-based management systems by writing standard, well-documented, and efficient code primarily in TypeScript with the React framework.</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               
+
+         
+
+                  
+                  
+                  
+                  
+
+                  
+            </div>
+            
+            <script src="script.js"></script>
+         
+      </main>
+
+
+      <footer class="text-center text-white" style="background-color: #f1f1f1;">
+         <div class="container-footer">
+
+         
+
+            <!-- Email -->
+            <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="mailto:nandis@umich.edu"
+            role="button"
+            data-mdb-ripple-color="dark"
+            target="_blank"
+            aria-label = "link email mainContent"
+            >
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            </a>
+
+            <!-- Portfolio -->
+            <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="index.html""
+            role="button"
+            data-mdb-ripple-color="dark"
+            aria-label = "link to portfolio home page"
+            target="_blank"
+            >
+            <i class="fas fa-briefcase">
+            </i>
+            </a>
+
+            <!-- Linkedin -->
+            <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="https://linkedin.com/in/soumyadip-nandi-966042207"
+            target="_blank"
+            role="button"
+            data-mdb-ripple-color="dark"
+            aria-label = "link to linkedIn profile page"
+            ><i class="fab fa-linkedin"></i
+            ></a>
+            <!-- Github -->
+            <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="https://github.com/soumyadip81"
+            target="_blank"
+            role="button"
+            data-mdb-ripple-color="dark"
+            aria-label = "link to github home page"
+            >
+            <i class="fab fa-github"></i>
+            </a>
+         </div>
+   
+
+         <!-- Copyright -->
+         <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2022 Copyright: Soumyadip Nandi
+         </div>
+   <!-- Copyright -->
+      </footer>
 
 </body>
 

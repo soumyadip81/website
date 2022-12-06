@@ -1,3 +1,37 @@
+.skip-to-main-content-link {
+  background: #fff;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  -webkit-transition: top 1s ease-out;
+  -o-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+
+.skip-to-main-content-link:focus {
+  top:20px;
+  color: #000;
+}
+@media (prefers-reduced-motion: reduce) {
+  .skip-to-main-content-link {
+    background: #fff;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    z-index: 1;
+    -webkit-transition:none;
+    -o-transition: none;
+    transition: none;
+  }
+  
+}
+
+nav{
+  width: 100%;
+}
 .navClass{
    
     justify-content: space-evenly;
@@ -57,7 +91,7 @@
 }
 
 
-/* Hero image */
+
 .me {
     width: 300px;
     border: 1px solid darkblue;
@@ -125,17 +159,3 @@
   }
 
   
-
-  /*
-  <div class="container col-sm">
-              <h1>Soumyadip Nandi</h1>
-              <h2>Software Engineer</h2>
-              <p>Front-end development experience in TypeScript and reactJs as well as coding on the Salesforce platform </p>
-
-              <div class="profilePic col-sm" >
-               <div class="icons"></div>
-               <img src = "assets/profile.png" alt = "picture of me" class = "me"/>
-              </div>
-             
-             
-            </div>

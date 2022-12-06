@@ -1,3 +1,21 @@
+.skip-to-main-content-link {
+    background: #fff;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: top 1s ease-out;
+    -o-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+  }
+  
+.skip-to-main-content-link:focus {
+    top:20px;
+    color: #000;
+    -webkit-text-decoration-style: solid;
+    text-decoration-style: solid;
+  }
 img{
    height:100px;
    border: black solid 2px;

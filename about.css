@@ -1,3 +1,22 @@
+
+.skip-to-main-content-link {
+  background: #fff;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  -webkit-transition: top 1s ease-out;
+  -o-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+
+.skip-to-main-content-link:focus {
+  top:20px;
+  color: #000;
+  -webkit-text-decoration-style: solid;
+  text-decoration-style: solid;
+}
 img{
   width:100px;
  height:100px;
@@ -38,6 +57,7 @@ border: black solid 2px;
 
 .timeline .timeline-item {
   position: relative;
+  margin-left: 5%;
 }
 
 .timeline .timeline-item:after {
@@ -46,84 +66,93 @@ border: black solid 2px;
   top: 0;
 }
 
-.timeline .timeline-item:after {
-  background-color: hsl(0, 0%, 90%);
-  left: -46px;
-  border-radius: 50%;
-  height: 11px;
-  width: 11px;
-  content: "";
-}
+
 
 .education{
-  grid-column: 1 / span 3;
+  grid-column: 1 / span 6;
 }
 
 .experience{
-  grid-column: 5 / span 3;
+  grid-column: 1 / span 6;
 }
 
 
 .skillHeader{
   text-align: center;
+  grid-row-start: 4;
   grid-column-start: 4;
   grid-column-end: 6;
 }
 
 
 .skill1{
-  grid-row-start: 4;
-  grid-column: 3 / span 1;
+  grid-row-start: 5;
+  grid-column: 3 / span 6;
 }
 .skill2{
-  grid-row-start: 4;
+  grid-row-start: 5;
   grid-column: 5 / span 1;
 }
 
 .skill5{
-  grid-row-start: 5;
+  grid-row-start: 6;
   grid-column: 3 / span 1;
 }
 .skill6{
-  grid-row-start: 5;
+  grid-row-start: 6;
   grid-column: 5 / span 1;
 }
 .skill11{
-  grid-row-start: 6;
+  grid-row-start: 7;
   grid-column: 5 / span 1;
 }
 .skill7{
-  grid-row-start: 6;
+  grid-row-start: 7;
   grid-column: 3 / span 1;
 }
 .skill8{
-  grid-row-start: 7;
+  grid-row-start: 8;
   grid-column: 3 / span 1;
 }
 .skill9{
-  grid-row-start: 7;
+  grid-row-start: 8;
   grid-column: 5 / span 1;
 }
 .skill4{
-  grid-row-start: 8;
+  grid-row-start: 9;
   grid-column: 3 / span 1;
 }
 .skill12{
-  grid-row-start: 8;
+  grid-row-start: 9;
   grid-column: 5 / span 1;
 }
 .skill10{
-  grid-row-start: 9;
+  grid-row-start: 10;
   grid-column: 3 / span 1;
 }
 .skill3{
-  grid-row-start: 9;
+  grid-row-start: 10;
   grid-column: 5 / span 1;
 }
 
   
 
   @media screen and (min-width: 700px) {
+
+    .education{
+      grid-column: 1 / span 3;
+    }
+    
+    .experience{
+      grid-column: 5 / span 3;
+    }
+    
+    
+    .skillHeader{
+      text-align: center;
+      grid-column-start: 4;
+      grid-column-end: 6;
+    }
     .navClass{
    
       justify-content: space-evenly;
@@ -140,55 +169,55 @@ border: black solid 2px;
   
 
     .skill1{
-      grid-row-start: 4;
+      grid-row-start: 5;
       grid-column: 3 / span 1;
     }
     .skill2{
-      grid-row-start: 4;
+      grid-row-start: 5;
       grid-column: 5 / span 1;
     }
     
     .skill3{
-      grid-row-start: 4;
+      grid-row-start: 5;
       grid-column: 7 / span 1;
     }
     .skill5{
-      grid-row-start: 5;
+      grid-row-start: 6;
       grid-column: 3 / span 1;
     }
     .skill6{
-      grid-row-start: 5;
+      grid-row-start: 6;
       grid-column: 5 / span 1;
     }
 
     .skill10{
-      grid-row-start: 5;
+      grid-row-start: 6;
       grid-column: 7 / span 1;
     }
     .skill11{
-      grid-row-start: 6;
+      grid-row-start: 7;
       grid-column: 5 / span 1;
     }
     .skill7{
-      grid-row-start: 6;
+      grid-row-start: 7;
       grid-column: 3 / span 1;
     }
 
     .skill12{
-      grid-row-start: 6;
+      grid-row-start: 7;
       grid-column: 7 / span 1;
     }
     .skill8{
-      grid-row-start: 7;
-      grid-column: 3 / span 1;
+      grid-row-start: 5;
+      grid-column: 1 / span 1;
     }
     .skill9{
-      grid-row-start: 7;
-      grid-column: 5 / span 1;
+      grid-row-start: 6;
+      grid-column: 1 / span 1;
     }
     .skill4{
       grid-row-start: 7;
-      grid-column: 7 / span 1;
+      grid-column: 1 / span 1;
     }
     
     
@@ -212,54 +241,54 @@ border: black solid 2px;
     
 
     .skill10{
-      grid-row-start: 4;
+      grid-row-start: 5;
       grid-column: 1 / span 1;
     }
   
     .skill1{
-      grid-row-start: 4;
+      grid-row-start: 5;
       grid-column: 3 / span 1;
     }
     .skill2{
-      grid-row-start: 4;
+      grid-row-start: 5;
       grid-column: 5 / span 1;
     }
     .skill3{
-      grid-row-start: 4;
+      grid-row-start: 5;
       grid-column: 7 / span 1;
     }
     .skill4{
-      grid-row-start: 5;
+      grid-row-start: 6;
       grid-column: 2 / span 1;
     }
     .skill5{
-      grid-row-start: 5;
+      grid-row-start: 6;
       grid-column: 4 / span 1;
     }
     .skill6{
-      grid-row-start: 5;
+      grid-row-start: 6;
       grid-column: 6 / span 1;
     }
     
   
     .skill12{
-      grid-row-start: 7;
+      grid-row-start: 8;
       grid-column: 4 / span 1;
     }
     .skill11{
-      grid-row-start: 6;
+      grid-row-start: 7;
       grid-column: 1 / span 1;
     }
     .skill7{
-      grid-row-start: 6;
+      grid-row-start: 7;
       grid-column: 3 / span 1;
     }
     .skill8{
-      grid-row-start: 6;
+      grid-row-start: 7;
       grid-column: 5 / span 1;
     }
     .skill9{
-      grid-row-start: 6;
+      grid-row-start: 7;
       grid-column: 7 / span 1;
     }
    
@@ -273,10 +302,10 @@ border: black solid 2px;
   }
   
   .experience{
-    grid-column: 5 / span 4;
+    grid-column: 5 / span 3;
   }
   .skill12{
-    grid-row-start: 5;
+    grid-row-start: 6;
     grid-column: 8 / span 1;
   }
   

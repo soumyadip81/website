@@ -4,11 +4,7 @@ const app = createApp({})
 
 
 createApp({
-  mounted() {
-    this.determineUniqueBottons();
-  },
-
-  
+ 
   created() {
     window.addEventListener('resize', this.handleResize);
     this.handleResize();
